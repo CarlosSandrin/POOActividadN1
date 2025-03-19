@@ -25,10 +25,12 @@ namespace ActividadN1
             
             Persona persona1 = new Persona("Charly", 35);
             persona1.Saludar();
+            persona1.tomarMate();
             Console.WriteLine("Ingrese una tecla para seguir.");
             Console.ReadKey();
             Tv Tele = new Tv("Sony", 500);
             Tele.PresentarTv();
+            Tele.Encender();
 
         }
 
@@ -50,6 +52,11 @@ namespace ActividadN1
             {
                 Console.WriteLine($"Hola, soy {nombre} y tengo {edad} años.");
             }
+
+            public void tomarMate()
+            {
+                Console.WriteLine("Estoy tomando mates.");
+            }
         }
 
         public class Tv
@@ -62,13 +69,18 @@ namespace ActividadN1
 
             public Tv(string mark, int cantCan)
             {
-                marca  = mark;
+                marca = mark;
                 cantCanales = cantCan;
             }
 
             public void PresentarTv()
             {
                 Console.WriteLine($"Este Televisor es de marca: {marca} y tiene {cantCanales} canales.");
+            }
+
+            public void Encender()
+            {
+                Console.WriteLine("El televisor se ha encendido.");
             }
         }
 
